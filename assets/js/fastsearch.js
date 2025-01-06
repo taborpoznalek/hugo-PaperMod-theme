@@ -84,13 +84,46 @@ sInput.onkeyup = function (e) {
             results = fuse.search(this.value.trim()); // the actual query being run using fuse.js
         }
         if (results.length !== 0) {
+            console.log(results);
             // build our html if result exists
             let resultSet = ''; // our results bucket
 
             for (let item in results) {
                 resultSet += `<li class="post-entry"><header class="entry-header">${results[item].item.title}&nbsp;»</header>` +
-                    `<a href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a></li>`
+                // `<p>${results[item].matches[0].value}</p>` +
+                `<a href="${results[item].item.permalink}" aria-label="${results[item].item.title}"></a></li>`
+                
             }
+            // for (let item in results) {
+            //     const result = results[item];
+            //     let snippet = '';
+                
+            //     // Find the first match and create a snippet
+            //     if (result.matches && result.matches.length > 0) {
+            //         const firstMatch = result.matches[0];
+            //         const indices = firstMatch.indices[0];
+            //         const text = result.item[firstMatch.key] || '';
+                    
+            //         // Create a snippet with some context around the match
+            //         const startIndex = Math.max(0, indices[0] - 30);
+            //         const endIndex = Math.min(text.length, indices[1] + 30);
+            //         snippet = text.substring(startIndex, endIndex);
+                    
+            //         // Highlight the matched part
+            //         const highlightedSnippet = snippet.replace(
+            //             text.substring(indices[0], indices[1]),
+            //             `<mark>${text.substring(indices[0], indices[1])}</mark>`
+            //         );
+                    
+            //         snippet = `<p class="search-snippet">${highlightedSnippet}</p>`;
+            //     }
+            
+            //     resultSet += `<li class="post-entry">
+            //         <header class="entry-header">${result.item.title}&nbsp;»</header>
+            //         <p>${snippet}</p>
+            //         <a href="${result.item.permalink}" aria-label="${result.item.title}"></a>
+            //     </li>`;
+            // }
 
             resList.innerHTML = resultSet;
             resultsAvailable = true;

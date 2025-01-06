@@ -6,33 +6,30 @@
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --content: rgb(31, 31, 31);
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+    --hero-height-gap-bottom: 30vh;
+    --hero-height-gap-top: 15vh;
+    --mobile-width: 768px;
 }
 
-.dark {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
-    --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
+.orange {
     --code-block-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
+    
+    --nav-color: rgb(250, 126, 59);
+    --nav-color-light: rgb(255, 142, 81);
+    --bg-theme: linear-gradient(315deg, rgb(243, 107, 55) 0%, rgb(243, 107, 55) 23%,rgb(244, 133, 60) 23%, rgb(244, 133, 60) 27%,rgb(245, 159, 64) 27%, rgb(245, 159, 64) 73%,rgb(245, 186, 69) 73%, rgb(245, 186, 69) 74%,rgb(246, 212, 73) 74%, rgb(246, 212, 73) 78%,rgb(247, 238, 78) 78%, rgb(247, 238, 78) 100%);
+    --txt-dark: rgb(50, 50, 50);
+    --txt-light: rgb(255, 255, 255);
+    --bg-dark: rgb(41, 41, 41);
+    --bg-dark-lighter: rgb(89, 89, 89);
+    --bg-light: rgb(232, 232, 232);
+    --bg-orange: rgb(255, 140, 0);
 }
 
 .list {
-    background: var(--code-bg);
-}
-
-.dark.list {
-    background: var(--theme);
+    background: var(--bg-theme);
 }

@@ -1,0 +1,32 @@
+<div class="hero-container" id="heroContainer">
+    <div class="hero-section">
+        <div class="image-loop">
+            {{ range .Site.Params.landingPageCarousel }}
+                <span><img src="{{ . }}" alt=""></span>
+            {{ end }}
+            {{ range .Site.Params.landingPageCarousel }}
+                <span><img src="{{ . }}" alt=""></span>
+            {{ end }}
+        </div>
+        <div class="welcome-text-logo">
+            {{- $logo_path := .Site.Params.logoPath -}}
+            <img src="{{ $logo_path }}" alt="">
+        </div>
+    </div>
+    <div class="hero-text">
+        <div class="orange-box">
+            <p>Připojte se k nám na nezapomenutelné letní dobrodružství!</p>
+            <!-- <p>Letos v termínu</p>  -->
+            <h2>{{ .Site.Params.datumTabora }}</h2>
+            <a href="./prihlaska" class="apply-button">
+                Přihlásit se na tábor
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.addEventListener('load', function() {
+        document.querySelector('.image-loop').classList.add('loaded');
+    });
+</script>

@@ -1,14 +1,14 @@
 #searchbox input {
     padding: 4px 10px;
     width: 100%;
-    color: var(--primary);
+    color: var(--txt-light);
     font-weight: bold;
-    border: 2px solid var(--tertiary);
+    border: 2px solid var(--bg-dark);
     border-radius: var(--radius);
 }
 
 #searchbox input:focus {
-    border-color: var(--secondary);
+    border-color: var(--bg-dark);
 }
 
 #searchResults li {
@@ -41,5 +41,5 @@
 
 #searchResults .focus {
     transform: scale(0.98);
-    border: 2px solid var(--tertiary);
+    border: 2px solid var(--bg-dark);
 }

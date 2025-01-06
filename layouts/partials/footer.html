@@ -16,8 +16,8 @@
 
     <span>
         Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
+        <!-- <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a> -->
     </span>
 </footer>
 {{- end }}
@@ -65,8 +65,9 @@
 {{- if (not site.Params.disableScrollToTop) }}
 <script>
     var mybutton = document.getElementById("top-link");
+    var viewportHeight = window.innerHeight;
     window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        if (document.body.scrollTop > viewportHeight || document.documentElement.scrollTop > viewportHeight) {
             mybutton.style.visibility = "visible";
             mybutton.style.opacity = "1";
         } else {

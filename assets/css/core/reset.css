@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--primary);
+    color: var(--txt-dark)
 }
 
 body {
@@ -28,7 +28,8 @@ body {
     font-size: 18px;
     line-height: 1.6;
     word-break: break-word;
-    background: var(--theme);
+    background: var(--bg-theme);
+    overflow-x: hidden;
 }
 
 article,
@@ -107,9 +108,10 @@ input[type=submit] {
     cursor: pointer;
 }
 
+/* color might be not set right */
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-    box-shadow: 0 0 0 50px var(--theme) inset;
+    box-shadow: 0 0 0 50px var(--bg-light) inset;
 }
 
 img {
