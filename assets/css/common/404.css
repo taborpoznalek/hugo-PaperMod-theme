@@ -21,3 +21,10 @@
     font-weight: 500;
 }
 
+@media (max-width: 768px) {
+    .not-found {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+}

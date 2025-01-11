@@ -25,6 +25,7 @@
     padding: 10px 20px;
     border-radius: var(--radius);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin-top: 20px !important;
 }
 .apply-button:hover {
     transform: translateY(-5px);
@@ -84,9 +85,12 @@
     min-width: 225px;
     min-height: auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .welcome-text-logo h1 {
         font-size: 1.3rem;
+    }
+    .hero-section {
+        margin-top: -60px;
     }
 }
 .image-loop span {

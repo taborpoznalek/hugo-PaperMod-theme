@@ -1,5 +1,9 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
+    <h2>Kontaktujte nás</h2>
+    <p>Máte-li jakékoli dotazy nebo byste rádi získali více informací<br> 
+        o našem táboře, neváhejte nás kontaktovat. Kontakty naleznete <a href="/kontakty/"><strong>zde</strong></a>.</p>
+    <br>
     {{- if not site.Params.footer.hideCopyright }}
         {{- if site.Copyright }}
         <span>{{ site.Copyright | markdownify }}</span>

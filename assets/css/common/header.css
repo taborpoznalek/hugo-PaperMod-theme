@@ -15,9 +15,10 @@
 
 .nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    max-width: calc(var(--nav-width)) + var(--gap) * 2;
+    align-items: center;
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin-inline-start: auto;
     margin-inline-end: auto;
     line-height: var(--header-height);
@@ -48,7 +49,9 @@
 }
 
 .icons {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .dropdown {
     margin-right: 20px;
@@ -105,6 +108,10 @@
     margin-right: 10px;
     color: var(--txt-dark);
     transition: color 0.3s ease;
+    padding: 10px;
+}
+.social-icons .prihlaska-button a {
+    margin-right: 0;
 }
 
 .social-icons a:hover, .dropdown button:hover, .site-label:hover {
@@ -116,24 +123,56 @@
     height: 24px;
 }
 
-@media (max-width: 768px) {
-    .social-icons {
-        margin-right: 10px;
-    }
-    
-    .social-icons a {
-        margin-right: 4px;
-    }
-    
-    .social-icons svg {
-        width: 20px;
-        height: 20px;
-    }
+
+.social-icons .prihlaska-button {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    height: 30px;
+    border: none;
+    border-radius: var(--radius);
+    text-decoration: none;
+    background-color: var(--txt-dark);
+    color: var(--txt-light);
+    justify-content: center;
+    transition: color 0.3s ease;
+    font-size: 14px;
+    padding: 0;
 }
 
+.social-icons .prihlaska-button:hover {
+    background-color: var(--txt-light);
+    color: var(--txt-dark);
+}
+
+.prihlaska-button span {
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .social-icons {
+        margin-right: 0;
+    }
+    .social-icons a {
+        margin-right: 5px;
+    }
+    .social-icons .prihlaska-button {
+        min-width: 80px;
+        border: none;
+        color: var(--txt-light);
+        white-space: nowrap;
+    }
+    .prihlaska-button span {
+        margin: 0 10px;
+    }
+    .dropdown {
+        margin-right: 10px;
+        padding: 0 10px;
+    }
+}
+    
 @media screen and (max-width: 768px) {
     .site-label {
         display: none;
     }
 }
-
