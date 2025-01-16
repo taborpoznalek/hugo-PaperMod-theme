@@ -37,6 +37,12 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
+    height: calc(var(--header-height) - 2px);
+}
+
+.logo a:hover {
+    border-bottom: 2px solid var(--txt-light);
+    color: var(--txt-light);
 }
 
 .logo a img, .logo a svg {
@@ -169,9 +175,13 @@
         margin-right: 10px;
         padding: 0 10px;
     }
-}
-    
-@media screen and (max-width: 768px) {
+    .dropdown-content {
+        width: 200px;
+        font-size: 1rem;
+    }
+    .dropdown-content a {
+        height: 50px;
+    }
     .site-label {
         display: none;
     }
