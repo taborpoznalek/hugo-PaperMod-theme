@@ -37,6 +37,12 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
+    height: calc(var(--header-height) - 2px);
+}
+
+.logo a:hover {
+    border-bottom: 2px solid var(--txt-light);
+    color: var(--txt-light);
 }
 
 .logo a img, .logo a svg {

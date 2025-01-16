@@ -1,13 +1,6 @@
 <div class="hero-container" id="heroContainer">
     <div class="hero-section">
-        <div class="image-loop">
-            {{ range .Site.Params.landingPageCarousel }}
-                <span><img src="{{ . }}" alt=""></span>
-            {{ end }}
-            {{ range .Site.Params.landingPageCarousel }}
-                <span><img src="{{ . }}" alt=""></span>
-            {{ end }}
-        </div>
+        {{ partial "landing-page-carousel.html" . }}
         <div class="welcome-text-logo">
             {{- $logo_path := .Site.Params.logoPath -}}
             <img src="{{ $logo_path }}" alt="">

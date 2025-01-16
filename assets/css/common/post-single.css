@@ -395,3 +395,14 @@ img.in-text {
     display: inline;
     margin: auto;
 }
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+    
+    .entry-hint-parent {
+        justify-content: center;
+    }
+}
